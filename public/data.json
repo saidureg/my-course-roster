@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "img": "https://i.ibb.co/Qc9XBNz/Rectangle-2-2.png",
+    "title": "Introduction to C Programming",
+    "credit_hour": 1,
+    "price": 15000,
+    "details": "Learn C programming fundamentals. Cover syntax, data types, and basic algorithms to kickstart your coding journey."
+  },
+  {
+    "id": 2,
+    "img": "https://i.ibb.co/wMNbxBF/Algorithm.png",
+    "title": "Introduction to Algorithms",
+    "credit_hour": 2,
+    "price": 25000,
+    "details": "Master algorithmic thinking. Explore sorting, searching, and graph algorithms to solve complex problems efficiently."
+  },
+  {
+    "id": 3,
+    "img": "https://i.ibb.co/HG25PpY/Cpp.png",
+    "title": "Introduction to C++ for DSA",
+    "credit_hour": 4,
+    "price": 19000,
+    "details": "Blend C++ programming with data structures and algorithms. Build a solid foundation for competitive programming."
+  },
+  {
+    "id": 4,
+    "img": "https://i.ibb.co/pJX9dTW/dsa.png",
+    "title": "Basic Data Structures",
+    "credit_hour": 3,
+    "price": 15000,
+    "details": "Explore essential data structures like arrays, linked lists, and trees. Enhance problem-solving skills effectively."
+  },
+  {
+    "id": 5,
+    "img": "https://i.ibb.co/Wk96WKy/Python.png",
+    "title": "Introduction to OOP Python",
+    "credit_hour": 5,
+    "price": 19000,
+    "details": "Learn Python's object-oriented programming. Develop reusable code and design software with elegance and efficiency."
+  },
+  {
+    "id": 6,
+    "img": "https://i.ibb.co/HHkZfB4/Software.png",
+    "title": "Software Engineering",
+    "credit_hour": 4,
+    "price": 24000,
+    "details": "Dive into software development methodologies, design patterns, and project management. Build high-quality software products."
+  },
+  {
+    "id": 7,
+    "img": "https://i.ibb.co/Vwg4Hq4/aws-cloud.png",
+    "title": "AWS Cloud Computing",
+    "credit_hour": 5,
+    "price": 35000,
+    "details": "Harness the power of AWS for scalable and secure cloud solutions. Deploy modern applications effectively and efficiently."
+  },
+  {
+    "id": 8,
+    "img": "https://i.ibb.co/WBf2Vsk/db-sql.png",
+    "title": "Database (MySQL)",
+    "credit_hour": 3,
+    "price": 17000,
+    "details": "Master MySQL database management. Design efficient schemas and query data for various applications and projects."
+  },
+  {
+    "id": 9,
+    "img": "https://i.ibb.co/C5MdSLX/Problem-Solving.png",
+    "title": "Problem-Solving Part",
+    "credit_hour": 2,
+    "price": 14000,
+    "details": "Sharpen your problem-solving skills. Tackle coding challenges and real-world problems effectively and confidently."
+  }
+]
