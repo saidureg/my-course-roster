@@ -8,6 +8,7 @@ const Home = () => {
   const [selectedCourse, setSelectedCourse] = useState([]);
   const [totalCreditHour, setTotalCreditHour] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [remaining, setRemaining] = useState(0);
 
   useEffect(() => {
     fetch("data.json")
@@ -26,8 +27,13 @@ const Home = () => {
       credit_hr += element.credit_hour;
       total_price += element.price;
     });
+    const creditRemaining = 20 - credit_hr;
+    if (credit_hr > 20) {
+      return alert("You have exceeded the limit of credit hours");
+    }
     setTotalCreditHour(credit_hr);
     setTotalPrice(total_price);
+    setRemaining(creditRemaining);
     setSelectedCourse([...selectedCourse, course]);
   };
 
@@ -45,7 +51,7 @@ const Home = () => {
       <div className="mt-6 w-1/6 mx-4">
         <div className="bg-base-100 text-[#1C1B1BCC] rounded-xl space-y-4 p-5">
           <p className="text-[#2F80ED] font-bold text-lg ">
-            Credit Hour Remaining{" "}
+            Credit Hour Remaining {remaining} hr
           </p>
           <hr />
           <h3 className="text-[#1C1B1B] text-xl font-bold ">Course Name</h3>
