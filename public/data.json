@@ -11,7 +11,7 @@
     "id": 2,
     "img": "https://i.ibb.co/wMNbxBF/Algorithm.png",
     "title": "Introduction to Algorithms",
-    "credit_hour": 2,
+    "credit_hour": 5,
     "price": 25000,
     "details": "Master algorithmic thinking. Explore sorting, searching, and graph algorithms to solve complex problems efficiently."
   },

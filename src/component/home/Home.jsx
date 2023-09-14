@@ -6,6 +6,8 @@ import Cart from "../cart-title/Cart";
 const Home = () => {
   const [loadData, setLoadData] = useState([]);
   const [selectedCourse, setSelectedCourse] = useState([]);
+  const [totalCreditHour, setTotalCreditHour] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
     fetch("data.json")
@@ -14,11 +16,18 @@ const Home = () => {
   }, []);
 
   const handleAddToCart = (course) => {
-    // let credit_hr = course.credit_hour;
+    let credit_hr = course.credit_hour;
+    let total_price = course.price;
     const isExist = selectedCourse.find((item) => item.id === course.id);
     if (isExist) {
       return alert("Your already added this course!! Try another course");
     }
+    selectedCourse.forEach((element) => {
+      credit_hr += element.credit_hour;
+      total_price += element.price;
+    });
+    setTotalCreditHour(credit_hr);
+    setTotalPrice(total_price);
     setSelectedCourse([...selectedCourse, course]);
   };
 
@@ -46,9 +55,9 @@ const Home = () => {
             ))}
           </div>
           <hr />
-          <p className="font-medium ">Total Credit Hour : </p>
+          <p className="font-medium ">Total Credit Hour : {totalCreditHour} </p>
           <hr />
-          <p className="font-semibold">Total Price : 48000 USD</p>
+          <p className="font-semibold">Total Price : {totalPrice} USD</p>
         </div>
       </div>
     </div>
