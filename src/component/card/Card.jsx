@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookOpen, faDollarSign } from "@fortawesome/free-solid-svg-icons";
 
-const Card = ({ course }) => {
+const Card = ({ course, handleAddToCart }) => {
   const { img, title, credit_hour, details, price } = course;
   return (
     <div className="card bg-base-100 shadow-xl">
@@ -28,7 +28,12 @@ const Card = ({ course }) => {
           </div>
         </div>
 
-        <button className="btn btn-primary">Select</button>
+        <button
+          onClick={() => handleAddToCart(course)}
+          className="btn btn-primary"
+        >
+          Select
+        </button>
       </div>
     </div>
   );
@@ -36,6 +41,7 @@ const Card = ({ course }) => {
 
 Card.propTypes = {
   course: PropTypes.object,
+  handleAddToCart: PropTypes.func,
 };
 
 export default Card;
