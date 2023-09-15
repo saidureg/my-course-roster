@@ -11,7 +11,7 @@ const Home = () => {
   const [selectedCourse, setSelectedCourse] = useState([]);
   const [totalCreditHour, setTotalCreditHour] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
-  const [remaining, setRemaining] = useState(0);
+  const [remaining, setRemaining] = useState(20);
 
   useEffect(() => {
     fetch("data.json")
