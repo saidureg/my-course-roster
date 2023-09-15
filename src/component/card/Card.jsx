@@ -9,9 +9,9 @@ const Card = ({ course, handleAddToCart }) => {
       <figure>
         <img className="w-full px-3 pt-3" src={img} alt={title} />
       </figure>
-      <div className="card-body space-y-2">
+      <div className="card-body h-80">
         <h2 className="card-title text-[#1C1B1B] font-semibold">{title}</h2>
-        <p className="text-[#1C1B1B99] text-sm">{details}</p>
+        <p className="text-[#1C1B1B99] ">{details}</p>
         <div className="flex justify-between text-[#1C1B1B99] font-medium">
           <div className="flex items-center gap-5">
             <p className="text-xl lg:text-2xl">

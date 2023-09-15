@@ -54,7 +54,7 @@ const Home = () => {
 
   return (
     <div className="flex flex-col lg:flex-row">
-      <div className="grid lg:grid-cols-3 gap-4 w-5/6 lg:mx-0 p-5">
+      <div className="grid lg:grid-cols-3 gap-4 w-4/5 mx-auto lg:mx-0 p-5">
         {loadData.map((course, idx) => (
           <Cards
             key={idx}
@@ -63,7 +63,7 @@ const Home = () => {
           ></Cards>
         ))}
       </div>
-      <div className="mt-6 w-1/6 mx-4">
+      <div className="mt-6 lg:w-1/5 mx-4">
         <div className="bg-base-100 text-[#1C1B1BCC] rounded-xl space-y-4 p-5">
           <p className="text-[#2F80ED] font-bold text-lg ">
             Credit Hour Remaining {remaining} hr
