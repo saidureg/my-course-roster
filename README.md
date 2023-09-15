@@ -27,9 +27,14 @@ const [selectedCourse, setSelectedCourse] = useState([]);
 
 `javascript`
 const [totalCreditHour, setTotalCreditHour] = useState(0);
+`javascript`
 const [totalPrice, setTotalPrice] = useState(0);
 
 - **Remaining Credit Hours**: The remaining credit hours are also calculated dynamically and stored in the remaining state.
 
 `javascript`
 const [remaining, setRemaining] = useState(20);
+
+React's useEffect hook is used to fetch course data from the JSON file when the component mounts. This ensures that the data is loaded and available for display.
+
+State updates are triggered by user actions, such as adding a course to the cart, and are reflected in the UI in real-time. Toast notifications are used to provide feedback to the user based on the state changes.
