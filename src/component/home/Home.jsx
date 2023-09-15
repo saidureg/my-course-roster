@@ -3,6 +3,9 @@ import Cards from "../cards/Cards";
 import { useEffect } from "react";
 import Cart from "../cart-title/Cart";
 
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Home = () => {
   const [loadData, setLoadData] = useState([]);
   const [selectedCourse, setSelectedCourse] = useState([]);
@@ -21,7 +24,13 @@ const Home = () => {
     let total_price = course.price;
     const isExist = selectedCourse.find((item) => item.id === course.id);
     if (isExist) {
-      return alert("Your already added this course!! Try another course");
+      return toast.warning(
+        "You already taken this course !!! Try another course",
+        {
+          position: "top-center",
+          autoClose: 5000,
+        }
+      );
     }
     selectedCourse.forEach((element) => {
       credit_hr += element.credit_hour;
@@ -29,7 +38,13 @@ const Home = () => {
     });
     const creditRemaining = 20 - credit_hr;
     if (credit_hr > 20) {
-      return alert("You have exceeded the limit of credit hours");
+      return toast.warning(
+        "You have already exceeded the credit hour limit !!!",
+        {
+          position: "top-center",
+          autoClose: 5000,
+        }
+      );
     }
     setTotalCreditHour(credit_hr);
     setTotalPrice(total_price);
